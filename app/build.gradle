@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:32.1.1-jre'
+
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api
+    implementation 'org.apache.tomcat:tomcat-servlet-api:9.0.85'
+// https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina
+    //  implementation 'org.apache.tomcat:tomcat-catalina:10.1.18'
+
+    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+// https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api
+    implementation 'org.apache.tomcat:tomcat-servlet-api:10.1.18'
+
+    // https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+//   implementation 'org.thymeleaf:thymeleaf:3.1.2.RELEASE'
+// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+    implementation 'org.thymeleaf:thymeleaf:3.1.0.M2'
+
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+//application {
+//    // Define the main class for the application.
+//    mainClass = 'hwjdev11_1.App'
+//}
+//
+//tasks.named('test') {
+//    // Use JUnit Platform for unit tests.
+//    useJUnitPlatform()
+//}
