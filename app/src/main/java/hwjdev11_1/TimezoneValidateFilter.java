@@ -16,7 +16,7 @@ import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.TimeZone;
 
-@WebFilter(value = "/time/*")
+//@WebFilter(value = "/time/*")
 public class TimezoneValidateFilter extends HttpFilter {
 
     @Override
